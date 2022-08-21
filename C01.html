@@ -1,0 +1,1219 @@
+<!DOCTYPE html>
+<html lang="" xml:lang="">
+  <head>
+    <title>Uso de Software Estadístico 2do Semestre 2022</title>
+    <meta charset="utf-8" />
+    <meta name="author" content="Millaray Herrera" />
+    <meta name="date" content="2022-08-21" />
+    <script src="C01_files/header-attrs-2.14/header-attrs.js"></script>
+    <link href="C01_files/vembedr-0.1.5.9000/css/vembedr.css" rel="stylesheet" />
+    <link rel="stylesheet" href="xaringan-themer.css" type="text/css" />
+  </head>
+  <body>
+    <textarea id="source">
+
+
+
+
+
+
+class: center, middle
+
+background-image: url("imagenes/fondo42.PNG")
+background-size: 110% 100%
+background-position: 50% 50%
+
+&lt;br/&gt;&lt;br/&gt;&lt;br/&gt;&lt;br/&gt;&lt;br/&gt;&lt;br/&gt;&lt;br/&gt;
+
+## Uso de Software Estadístico
+&lt;br/&gt;
+## Segundo semestre 2022
+&lt;br/&gt;
+### Clase 1: Introducción a R
+&lt;br/&gt;
+### Millaray Herrera Tralma
+###2022
+
+---
+
+background-image: url("imagenes/fondo3.PNG")
+background-size: 910px 90px
+background-position: 100% 0%
+# Clase 1: Introducción a R
+
+&lt;br/&gt;
+
+ + Introducción.
+ 
+ + R, RStudio y RStudioCloud
+ 
+ + Script, comentarios, y secciones.
+ 
+ + Directorios de trabajo y proyectos.
+ 
+ + Cálculos.
+ 
+ + Funciones.
+ 
+ + Objetos.
+ 
+ + Paquetes.
+ 
+ + Errores.
+ 
+---
+
+background-image: url("imagenes/fondo3.PNG")
+background-size: 910px 90px
+background-position: 100% 0%
+# Recomendaciones generales
+
+&lt;br/&gt;&lt;br/&gt;&lt;br/&gt;&lt;br/&gt;&lt;br/&gt;
+**Trate de tener más de una pantalla**
+&lt;img style="float:right; height:60%; width:300px;" src="imagenes/img01.png"&gt;
+
+Tener una segunda pantalla para la clase es ideal, ya que le permitirá ver al mismo tiempo las clases y  trabajar en su propio computador.
+
+---
+
+background-image: url("imagenes/fondo3.PNG")
+background-size: 910px 90px
+background-position: 100% 0%
+# R y RStudio
+&lt;/br&gt;&lt;/br&gt;
+
+.pull-left[
+&lt;img src="imagenes/img02.png" width="35%" style="display: block; margin: auto;" /&gt;
+
+&lt;font size="6"&gt;&lt;center&gt;&lt;b&gt;R&lt;/b&gt;&lt;/center&gt;&lt;/font&gt;
+&lt;div style='text-align: justify; margin:5px;padding:15px;'&gt;&lt;font size="4" color="black"&gt; 
+Es un lenguaje y entorno para computación estadística y gráficos. En este entorno se implementan técnicas estadísticas y se extiende muy fácilmente a través de paquetes. Está disponible como software libre.
+&lt;/font&gt;
+&lt;/div&gt;
+]
+
+.pull-right[
+&lt;img src="imagenes/img03.png" width="80%" style="display: block; margin: auto;" /&gt;
+
+&lt;font size="6"&gt;&lt;center&gt;&lt;b&gt;RStudio&lt;/b&gt;&lt;/center&gt;&lt;/font&gt;
+&lt;div style='text-align: justify; margin:5px;padding:15px;'&gt;&lt;font size="4" color="black"&gt; 
+Es un entorno de desarrollo integrado (IDE) para R. Incluye varios elementos que facilitan las tareas durante el flujo de trabajo.
+&lt;/font&gt;
+&lt;/div&gt;
+]
+
+---
+
+background-image: url("imagenes/fondo3.PNG")
+background-size: 910px 90px
+background-position: 100% 0%
+# ¿Por qué usar R?
+&lt;br&gt;&lt;br&gt;&lt;br&gt;&lt;br&gt;
+&lt;img style="float:right; height:60%; width:300px;" src="imagenes/img02.png"&gt;
+
+* Gran comunidad.
+
+* Variedad de paquetes.
+
+* Facilidad de lenguaje.
+
+* Gratuito.
+
+* Implementación de otros lenguajes.
+
+---
+
+background-image: url("imagenes/fondo3.PNG")
+background-size: 910px 90px
+background-position: 100% 0%
+# Instalación de R y Rstudio
+&lt;/br&gt;
+En el siguiente **video** se puede ver el paso a paso de donde descargar e instalar R y RStudio:
+&lt;/br&gt;
+&lt;center&gt;
+<div class="vembedr">
+<div>
+<iframe src="https://www.youtube.com/embed/kRR1ApeluOQ" width="533" height="300" frameborder="0" allowfullscreen="" data-external="1"></iframe>
+</div>
+</div>
+&lt;/center&gt;
+&lt;br&gt;
+Los links de descargas se pueden encontrar a continuación:
+* [Descargar R](https://uvirtual.usach.cl/moodle/mod/url/view.php?id=883613)
+* [Descargar RStudio](https://uvirtual.usach.cl/moodle/mod/url/view.php?id=883614)
+
+---
+
+background-image: url("imagenes/fondo3.PNG")
+background-size: 910px 90px
+background-position: 100% 0%
+# R
+&lt;/br&gt;&lt;/br&gt;
+Así es como se ve R
+&lt;/br&gt;&lt;/br&gt;
+&lt;img style="float:center; height:80%; width:3000px;" src="imagenes/img04.png"&gt;
+&lt;/br&gt;&lt;/br&gt;
+Hay una ventana de corresponde a la **consola** y otra que es el **script**.
+
+---
+
+background-image: url("imagenes/fondo3.PNG")
+background-size: 910px 90px
+background-position: 100% 0%
+# Rstudio
+&lt;/br&gt;
+Así es como se ve RStudio
+&lt;/br&gt;
+&lt;center&gt;
+&lt;img style="float:center; height:25%; width:600px;" src="imagenes/img05.png"&gt;
+&lt;/center&gt;
+&lt;/br&gt;
+Acá se tienen 3 paneles de trabajo:
++ Está la &lt;font color="#ED1C24"&gt;consola&lt;/font&gt;
++ El ambiente de trabajo (&lt;font color="#3F48CC"&gt;Environment&lt;/font&gt;)
++ Y el panel de &lt;font color="#22B14C"&gt;ayuda y visualización&lt;/font&gt;
+
+---
+
+background-image: url("imagenes/fondo3.PNG")
+background-size: 910px 90px
+background-position: 100% 0%
+# Rstudio Cloud
+&lt;/br&gt;
+.pull-left[
+Si no quiere/puede instalar R en sus equipos, está la opción de usar su versión en la nube, llamada &lt;b&gt;RStudioCloud&lt;/b&gt;.
+
+A diferencia de RStudio, para empezar a trabajar con RStudioCloud es necesario crear un **proyecto**.
+
+El plan gratuito de RStudioCloud es suficiente para el trabajo que se realizará en las clases, para crearse una cuenta acceda al siguiente [link](https://rstudio.cloud/plans/free).
+]
+
+.pull-right[
+&lt;img style="float:center; height:90%; width:900px;" src="imagenes/img06.png"&gt;
+]
+
+---
+
+background-image: url("imagenes/fondo3.PNG")
+background-size: 910px 90px
+background-position: 100% 0%
+# Personalización
+&lt;/br&gt;
+&lt;div style='text-align: justify'&gt;
+Un aspecto importante de RStudio y RStudioCloud es que se puede personalizar la apariencia del programa. Como se estará expuesto a muchas horas de programación es recomendable cambiar el tema predeterminado a uno oscuro, esto se hace en: **Tools &gt; Global Options &gt; Appearence**
+&lt;/div&gt;
+&lt;/br&gt;
+&lt;img src="imagenes/img07.png" width="45%" style="display: block; margin: auto;" /&gt;
+
+---
+
+background-image: url("imagenes/fondo3.PNG")
+background-size: 910px 90px
+background-position: 100% 0%
+# Primeros pasos en R
+&lt;/br&gt;
+1. Abra RStudio o RStudioCloud.
+
+2. Copie y pegue en la consola el siguiente código y presione "Enter"
+
+
+```r
+print("Hola R")
+paste("Hola", "R", sep=" ")
+```
+
+Al hacerlo, obtendrá en la consola el siguiente resultado
+
+
+```
+## [1] "Hola R"
+```
+
+Ahora teclee la siguuiente secuencia Ctrl+l o Cmd+L
+
+¿Qué ocurrió?
+
+---
+
+background-image: url("imagenes/fondo3.PNG")
+background-size: 910px 90px
+background-position: 100% 0%
+# Script (archivo .R)
+&lt;/br&gt;
+&lt;div style='text-align: justify'&gt;
+Un script es un espacio en donde se escribe el código que quieren conservar. Para crear un nuevo script puede hacer cualquiera de estas opciones:
+&lt;/br&gt;
+&lt;/div&gt;
+
++ Click en **File &gt; New File &gt; R Script**
+
++ Teclear **Ctrl/Cmd + Shift + N**
+
+&lt;img src="imagenes/img08.png" width="60%" style="display: block; margin: auto;" /&gt;
+&lt;div style='text-align: justify'&gt;
+Ahora hay cuatro paneles, el &lt;font color="#A349A4"&gt;script&lt;/font&gt; aparece en el bloque de la esquina superior.
+izquierda.
+&lt;/div&gt;
+
+---
+
+background-image: url("imagenes/fondo3.PNG")
+background-size: 910px 90px
+background-position: 100% 0%
+# Script (archivo .R)
+
+&lt;/br&gt;
+Para ejecutar el código en el script de R, están las siguientes opciones:
++ **Ctrl/Cmd + Enter** &amp;rarr; Ejecuta la expresión seleccionada
+
++ **Ctrl/Cmd + Shift + Enter** &amp;rarr; Para ejecutar todo el código (Source)
+
+&lt;div style="text-align:justify"&gt; 
+Para guardar el script puede teclear &lt;b&gt;Ctrl/Cmd + S&lt;/b&gt; o hacer click en el ícono del disquette que está sobre el script, esto guardará un archivo .R con el nombre que le asigne.
+&lt;/br&gt;&lt;/br&gt;
+También en RStudio tiene &lt;b&gt;diagnóstico de errores&lt;/b&gt; en la sintáxis de código y &lt;b&gt;autocompletado&lt;/b&gt;:
+&lt;/div&gt;
+
+.pull-left[
+Diagnóstico de errores
+
+&lt;img src="imagenes/img09.png" width="87%" style="display: block; margin: auto;" /&gt;
+]
+
+.pull-right[
+Autocompletado
+
+&lt;img src="imagenes/img10.png" width="80%" style="display: block; margin: auto;" /&gt;
+]
+
+---
+
+background-image: url("imagenes/fondo3.PNG")
+background-size: 910px 90px
+background-position: 100% 0%
+# Comentarios y Secciones
+&lt;/br&gt;
+&lt;div style="text-align:justify"&gt; 
+En R se puede comentar lineas de código anteponiendo el símbolo &lt;b&gt;#&lt;/b&gt;, esto permite ordenar el código, hacer descripciones de lo que está ejecutando o guardar códigos que no quiera ejecutar:
+&lt;/div&gt;
+
+
+```r
+### Este es un comentario de R, puede usarlo para poner títulos
+
+5+5 ## También para comentar después de operaciones/código
+
+# print("Diplomado en Estadística mención Minería de Datos")
+```
+
+&lt;div style="text-align:justify"&gt; 
+También puede comentar una o múltiples líneas seleccionando el código y tecleando &lt;b&gt;Ctrl/Cmd + Shift + C&lt;/b&gt;.
+&lt;/br&gt;&lt;/br&gt;
+Finalmente, la secuencia &lt;b&gt;Ctrl/Cmd + Shift + R&lt;/b&gt; permite seccionar fácilmente los código. Al teclearlo aparecerá una ventana emergente en donde tendrá que colocar el nombre de la sección.
+&lt;/div&gt;
+
+---
+
+background-image: url("imagenes/fondo3.PNG")
+background-size: 910px 90px
+background-position: 100% 0%
+# Actividad práctica
+&lt;/br&gt;
+1. Cree un nuevo script
+
+2. Guárdelo con el nombre "Clase1".
+
+3. Añada una sección con su nombre (**Ctrl/Cmd + R**).
+
+4. Copie, pegue y ejecute el siguiente código en el script que creó:
+
+
+```r
+# R como calculadora
+2+2
+3*6
+# R crea objetos
+x &lt;- 5+3
+y &lt;- 7-2
+a &lt;- "hola"
+```
+
+5. Ahora pruebe haciendo lo mismo pero en la consola. ¿Cuál es la diferencia?
+
+---
+
+background-image: url("imagenes/fondo3.PNG")
+background-size: 910px 90px
+background-position: 100% 0%
+# Directorios de trabajo
+&lt;/br&gt;
+El directorio de trabajo es donde R:
+
++ Busca los archivos que quiere leer.
+
++ Coloca los archivos que quiere guardar.
+
+Para conocer su directorio de trabajo actual ejecute el comando **getwd()**.
+
+---
+
+background-image: url("imagenes/fondo3.PNG")
+background-size: 910px 90px
+background-position: 100% 0%
+# Proyectos de RStudio
+&lt;/br&gt;
+&lt;div style="text-align:justify"&gt; 
+Durante el flujo de trabajo lo ideal es mantener todos los archivos relacionados a un análisis en un mismo lugar, es por esto que se trabajará con los Proyectos de RStudio.
+&lt;/br&gt;&lt;/br&gt;
+En el siguiente &lt;b&gt;vídeo&lt;/b&gt; muestra como crear un proyecto:
+&lt;/br&gt;&lt;/br&gt;
+&lt;/div&gt;
+&lt;center&gt;
+<div class="vembedr">
+<div>
+<iframe src="https://www.youtube.com/embed/WZa02pgck64" width="533" height="300" frameborder="0" allowfullscreen="" data-external="1"></iframe>
+</div>
+</div>
+&lt;/center&gt;
+
+---
+
+background-image: url("imagenes/fondo3.PNG")
+background-size: 910px 90px
+background-position: 100% 0%
+# Carpetas
+&lt;/br&gt;
+&lt;div style="text-align:justify"&gt; 
+En el proyecto puede incluir distintas carpetas que permiten trabajar e indexar de manera más organizada y simple.
+&lt;/br&gt;&lt;/br&gt;
+Para crear una nueva carpeta pueden ocupar el botón &lt;b&gt;New Folder&lt;/b&gt; que se encuentra en &lt;b&gt;Files&lt;/b&gt;.
+&lt;/br&gt;&lt;/br&gt;
+&lt;/div&gt;
+
+&lt;img src="imagenes/img11.png" width="90%" style="display: block; margin: auto;" /&gt;
+&lt;/br&gt;&lt;/br&gt;
+O puede hacerlo con el siguiente código:
+
+
+```r
+dir.create("nueva_carpeta")
+```
+
+---
+
+background-image: url("imagenes/fondo3.PNG")
+background-size: 910px 90px
+background-position: 100% 0%
+# Actividad práctica
+&lt;/br&gt;
+1. Cree un nuevo proyecto para esta clase, con el nombre de Clase_1.
+
+2. Abra el proyecto y ejecute el siguiente código **getwd()**.
+
+3. ¿Qué carpetas cree que podría llevar un proyecto para que esté más organizado?
+
+4. Cree esas carpetas ya sea con código o con la opción **New Folder**.
+
+---
+
+background-image: url("imagenes/fondo3.PNG")
+background-size: 910px 90px
+background-position: 100% 0%
+# Cálculos en R
+&lt;/br&gt;
+R se puede usar como una calculadora. Algunas operaciones que podemos realizar son:
+
+.pull-left[
+&lt;center&gt;
+&lt;table style="border: hidden"&gt;
+
+&lt;tr&gt;
+&lt;th valign="middle" align="center" style="margin:15px; padding:15px; background-color:#BFC0C0; border: hidden"&gt; Operación &lt;/th&gt;
+&lt;/tr&gt;
+
+&lt;tr&gt;
+&lt;td style="margin:6px; padding:6px; border: hidden" align="center"&gt; 
++ &amp;nbsp; suma
+&lt;/td&gt;
+&lt;/tr&gt;
+
+&lt;tr&gt;
+&lt;td style="margin:6px; padding:6px; border: hidden; background-color:#cccccc" align="center"&gt; 
+- &amp;nbsp; resta
+&lt;/td&gt;
+&lt;/tr&gt;
+
+&lt;tr&gt;
+&lt;td style="margin:6px; padding:6px; border: hidden" align="center"&gt; 
+* &amp;nbsp; multiplicación
+&lt;/td&gt;
+&lt;/tr&gt;
+
+&lt;tr&gt;
+&lt;td style="margin:6px; padding:6px; border: hidden; background-color:#cccccc" align="center"&gt; 
+/ &amp;nbsp; división
+&lt;/td&gt;
+&lt;/tr&gt;
+
+&lt;tr&gt;
+&lt;td style="margin:6px; padding:6px; border: hidden" align="center"&gt; 
+%/% &amp;nbsp; división entera
+&lt;/td&gt;
+&lt;/tr&gt;
+
+&lt;tr&gt;
+&lt;td style="margin:6px; padding:6px; border: hidden; background-color:#cccccc" align="center"&gt; 
+^ &amp;nbsp; potencia
+&lt;/td&gt;
+&lt;/tr&gt;
+
+&lt;tr&gt;
+&lt;td style="margin:6px; padding:6px; border: hidden" align="center"&gt; 
+sqrt() &amp;nbsp; raíz cuadrada
+&lt;/td&gt;
+&lt;/tr&gt;
+
+&lt;tr&gt;
+&lt;td style="margin:6px; padding:6px; border: hidden; background-color:#cccccc" align="center"&gt; 
+log() &amp;nbsp; logaritmo base e
+&lt;/td&gt;
+&lt;/tr&gt;
+
+&lt;tr&gt;
+&lt;td style="margin:6px; padding:6px; border: hidden" align="center"&gt; 
+exp() &amp;nbsp; exponencial
+&lt;/td&gt;
+&lt;/tr&gt;
+
+&lt;tr&gt;
+&lt;td style="margin:6px; padding:6px; border: hidden; background-color:#cccccc" align="center"&gt; 
+abs() &amp;nbsp; valor absoluto
+&lt;/td&gt;
+&lt;/tr&gt;
+
+&lt;/table&gt;
+&lt;/center&gt;
+]
+
+.pull-right[
+**Calcule en R**
+`$$3 + 4 * 2 + e^{2}$$`
+`$$log(5) + \frac{\pi}{\sqrt{5}}$$`
+]
+
+---
+
+background-image: url("imagenes/fondo3.PNG")
+background-size: 910px 90px
+background-position: 100% 0%
+# Cálculos en R
+&lt;/br&gt;
+R se puede usar como una calculadora. Algunas operaciones que podemos realizar son:
+
+.pull-left[
+&lt;center&gt;
+&lt;table style="border: hidden"&gt;
+
+&lt;tr&gt;
+&lt;th valign="middle" align="center" style="margin:15px; padding:15px; background-color:#BFC0C0; border: hidden"&gt; Operación &lt;/th&gt;
+&lt;/tr&gt;
+
+&lt;tr&gt;
+&lt;td style="margin:6px; padding:6px; border: hidden" align="center"&gt; 
++ &amp;nbsp; suma
+&lt;/td&gt;
+&lt;/tr&gt;
+
+&lt;tr&gt;
+&lt;td style="margin:6px; padding:6px; border: hidden; background-color:#cccccc" align="center"&gt; 
+- &amp;nbsp; resta
+&lt;/td&gt;
+&lt;/tr&gt;
+
+&lt;tr&gt;
+&lt;td style="margin:6px; padding:6px; border: hidden" align="center"&gt; 
+* &amp;nbsp; multiplicación
+&lt;/td&gt;
+&lt;/tr&gt;
+
+&lt;tr&gt;
+&lt;td style="margin:6px; padding:6px; border: hidden; background-color:#cccccc" align="center"&gt; 
+/ &amp;nbsp; división
+&lt;/td&gt;
+&lt;/tr&gt;
+
+&lt;tr&gt;
+&lt;td style="margin:6px; padding:6px; border: hidden" align="center"&gt; 
+%/% &amp;nbsp; división entera
+&lt;/td&gt;
+&lt;/tr&gt;
+
+&lt;tr&gt;
+&lt;td style="margin:6px; padding:6px; border: hidden; background-color:#cccccc" align="center"&gt; 
+^ &amp;nbsp; potencia
+&lt;/td&gt;
+&lt;/tr&gt;
+
+&lt;tr&gt;
+&lt;td style="margin:6px; padding:6px; border: hidden" align="center"&gt; 
+sqrt() &amp;nbsp; raíz cuadrada
+&lt;/td&gt;
+&lt;/tr&gt;
+
+&lt;tr&gt;
+&lt;td style="margin:6px; padding:6px; border: hidden; background-color:#cccccc" align="center"&gt; 
+log() &amp;nbsp; logaritmo base e
+&lt;/td&gt;
+&lt;/tr&gt;
+
+&lt;tr&gt;
+&lt;td style="margin:6px; padding:6px; border: hidden" align="center"&gt; 
+exp() &amp;nbsp; exponencial
+&lt;/td&gt;
+&lt;/tr&gt;
+
+&lt;tr&gt;
+&lt;td style="margin:6px; padding:6px; border: hidden; background-color:#cccccc" align="center"&gt; 
+abs() &amp;nbsp; valor absoluto
+&lt;/td&gt;
+&lt;/tr&gt;
+
+&lt;/table&gt;
+&lt;/center&gt;
+]
+
+.pull-right[
+**Calcule en R**
+`$$3 + 4 * 2 + e^{2}$$`
+`$$log(5) + \frac{\pi}{\sqrt{5}}$$`
+**Solución**
+
+```r
+3+(4*2)+exp(2)
+```
+
+```
+## [1] 18.38906
+```
+
+```r
+log(5)+pi/sqrt(5)
+```
+
+```
+## [1] 3.014401
+```
+
+]
+
+---
+
+background-image: url("imagenes/fondo3.PNG")
+background-size: 910px 90px
+background-position: 100% 0%
+# La lógica del funcionamiento de R
+&lt;/br&gt;
+&lt;div style="text-align:justify"&gt; 
+En lo relacionado con el análisis de datos, en R se aplican funciones de una manera muy intuitiva:
+&lt;/br&gt;&lt;/br&gt;
+&lt;/div&gt;
+&lt;img src="imagenes/img12.png" width="80%" style="display: block; margin: auto;" /&gt;
+&lt;/br&gt;&lt;/br&gt;
+&lt;div style="text-align:justify"&gt; 
+Los &lt;b&gt;"..."&lt;/b&gt; corresponden a los argumentos que modifican la acción a realizar, dependiendo de la función, ésta puede o no tener argumentos, además de que pueden ser obligatorios u opcionales.
+&lt;/div&gt;
+
+---
+
+
+background-image: url("imagenes/fondo3.PNG")
+background-size: 910px 90px
+background-position: 100% 0%
+# Funciones en R
+&lt;/br&gt;
+&lt;div style="text-align:justify"&gt; 
+La funciones son operaciones que están guardadas con un nombre específico en R. Hay funciones que requieren argumentos (inputs) y otras no. Los argumentos de una función van siempre dentro del paréntesis:
+&lt;/div&gt;
+&lt;/br&gt;
+sqrt(520)&lt;/br&gt;
+getwd()&lt;/br&gt;
+Sys.Date()
+&lt;/br&gt;&lt;/br&gt;
+&lt;div style="text-align:justify"&gt; 
+Al escribir y ejecutar solo el nombre de la función podemos consultar el código almacenado en ella, por ejemplo:
+&lt;/div&gt;
+&lt;/br&gt;
+sqrt
+&lt;/br&gt;&lt;/br&gt;
+&lt;div style="text-align:justify"&gt; 
+Puede consultar ayuda y detalles de la función al ejecutar, anteponiendo &lt;b&gt;?&lt;/b&gt; o usando la función &lt;b&gt;help()&lt;/b&gt;:
+&lt;/div&gt;
+&lt;/br&gt;
+?sqrt &lt;/br&gt;
+help(sqrt)
+
+---
+
+background-image: url("imagenes/fondo3.PNG")
+background-size: 910px 90px
+background-position: 100% 0%
+# Funciones en R
+&lt;/br&gt;
+&lt;div style="text-align:justify"&gt; 
+Si una función tiene más de un argumento estos se separan con una coma, para consultar los argumentos de una función se utiliza el comando &lt;b&gt;args(nombrefuncion)&lt;/b&gt;
+&lt;/br&gt;&lt;/br&gt;
+&lt;/div&gt;
+## Actividad
+&lt;/br&gt;
+&lt;b&gt;1. &lt;/b&gt;¿Qué argumentos recibe la función &lt;b&gt;log()&lt;/b&gt;?
+
+&lt;b&gt;Respuesta&lt;/b&gt; Esto se hace con el comando args(log)
+&lt;/br&gt;
+
+```r
+args(log)
+```
+
+```
+## function (x, base = exp(1)) 
+## NULL
+```
+
+---
+
+background-image: url("imagenes/fondo3.PNG")
+background-size: 910px 90px
+background-position: 100% 0%
+# Actividad (continuación)
+&lt;/br&gt;
+&lt;b&gt;2. &lt;/b&gt;¿Cuál es la diferencia entre log(100,10) y log(10,100)?&lt;/br&gt;&lt;/br&gt;
+&lt;b&gt;Respuesta&lt;/b&gt; El primero calcula el logaritmo de 100 en base 10, y el segundo calcula el logaritmo de 10 en base 100.
+&lt;/br&gt;
+
+
+```r
+log(100,10)
+```
+
+```
+## [1] 2
+```
+
+```r
+log(10,100)
+```
+
+```
+## [1] 0.5
+```
+
+&lt;b&gt;3. &lt;/b&gt;¿Cuál es el error en el siguiente código: &lt;b&gt;log(base=10)&lt;/b&gt;?&lt;/br&gt;&lt;/br&gt;
+&lt;b&gt;Respuesta&lt;/b&gt; El error es que no está agregando el argumento x, en esta función sólo el argumento x es obligatorio.
+
+---
+
+background-image: url("imagenes/fondo3.PNG")
+background-size: 910px 90px
+background-position: 100% 0%
+# Objetos en R
+&lt;/br&gt;
+&lt;div style="text-align:justify"&gt; 
+Para guardar información y/o resultados en R se crean objetos, para ello se escribe el nombre y “asigna” los valores con el operador &lt;b&gt; &lt;- &lt;/b&gt;.
+&lt;/br&gt;&lt;/br&gt;
+Los nombres permiten representar resultados de una manera más sencilla y usarlos en los código, incluso aplicarles funciones:
+&lt;/div&gt;
+&lt;/br&gt;
+&lt;b&gt;1. &lt;/b&gt;Se define un objeto llamado "numero":
+&lt;/br&gt;
+
+```r
+numero &lt;- 256
+```
+
+&lt;b&gt;2. &lt;/b&gt;Se define a la raíz cuadrada de "numero" como "resultado":
+&lt;/br&gt;
+
+```r
+resultado &lt;- sqrt(256)
+```
+
+&lt;b&gt;3. &lt;/b&gt;Se imprime en la consola el valor guardado en "resultado":
+&lt;/br&gt;
+
+```r
+resultado
+```
+
+```
+## [1] 16
+```
+
+---
+
+background-image: url("imagenes/fondo3.PNG")
+background-size: 910px 90px
+background-position: 100% 0%
+# Objetos en R
+&lt;/br&gt;
+&lt;div style="text-align:justify"&gt; 
+Si el nombre de un objeto ya existe, R lo va a sobreescribir. Por ejemplo:
+&lt;/div&gt;
+&lt;/br&gt;
+
+```r
+a &lt;- 5
+b &lt;- a
+a &lt;- 3
+```
+
+&lt;center&gt;¿Cuál es el valor de &lt;b&gt;a&lt;/b&gt;?&lt;/center&gt;
+
+```r
+a
+```
+
+```
+## [1] 3
+```
+
+&lt;center&gt;¿Cuál es el valor de &lt;b&gt;b&lt;/b&gt;?&lt;/center&gt;
+
+```r
+b
+```
+
+```
+## [1] 5
+```
+
+---
+
+background-image: url("imagenes/fondo3.PNG")
+background-size: 910px 90px
+background-position: 100% 0%
+# Asignaciones
+&lt;/br&gt;
+&lt;div style="text-align:justify"&gt; 
+Hay distintos operadores para crear nuevos objetos, los más usados son &lt;b&gt;&lt;- &lt;/b&gt; y &lt;b&gt; = &lt;/b&gt;
+&lt;/div&gt;
+
+
+```r
+nombre &lt;- objeto
+nombre = objeto
+```
+
+&lt;div style="text-align:justify"&gt; 
+Se recomienda usar &lt;b&gt; &lt;- &lt;/b&gt;, dado que es fácil de reconocer visualmente y genera menos confusión que el signo &lt;b&gt; = &lt;/b&gt;. También podemos asignar usando -&gt;, pero es poco usual y genera desorden en nuestro código.
+&lt;/div&gt;
+
+
+```r
+objeto -&gt; nombre
+```
+
+---
+
+background-image: url("imagenes/fondo3.PNG")
+background-size: 910px 90px
+background-position: 100% 0%
+# "Traduciendo" las ideas
+&lt;/br&gt;
+**Datos:** Cantidad de poleras disponibles por mes
+&lt;/br&gt;
+
+&lt;center&gt;
+&lt;table style="border: hidden"&gt;
+
+&lt;tr&gt;
+&lt;th valign="middle" align="center" style="margin:5px; padding:5px; background-color:#BFC0C0; border: hidden"&gt; Meses &lt;/th&gt;
+&lt;th valign="middle" align="center" style="margin:5px; padding:5px; background-color:#BFC0C0; border: hidden"&gt; Poleras &lt;/th&gt;
+&lt;/tr&gt;
+
+&lt;tr&gt;
+&lt;td style="margin:3px; padding:3px; border: hidden" align="left"&gt; 
+Enero
+&lt;/td&gt;
+&lt;td style="margin:3px; padding:3px; border: hidden" align="left"&gt; 
+254
+&lt;/td&gt;
+&lt;/tr&gt;
+
+&lt;tr&gt;
+&lt;td style="margin:3px; padding:3px; border: hidden; background-color:#cccccc" align="left"&gt; 
+Febrero
+&lt;/td&gt;
+&lt;td style="margin:3px; padding:3px; border: hidden; background-color:#cccccc" align="left"&gt; 
+203
+&lt;/td&gt;
+&lt;/tr&gt;
+
+&lt;tr&gt;
+&lt;td style="margin:3px; padding:3px; border: hidden" align="left"&gt; 
+Marzo
+&lt;/td&gt;
+&lt;td style="margin:3px; padding:3px; border: hidden" align="left"&gt; 
+182
+&lt;/td&gt;
+&lt;/tr&gt;
+
+&lt;tr&gt;
+&lt;td style="margin:3px; padding:3px; border: hidden; background-color:#cccccc" align="left"&gt; 
+Abril
+&lt;/td&gt;
+&lt;td style="margin:3px; padding:3px; border: hidden; background-color:#cccccc" align="left"&gt; 
+50
+&lt;/td&gt;
+&lt;/tr&gt;
+
+&lt;/table&gt;
+&lt;/center&gt;
+
+&lt;/br&gt;
+Ideas que pueden surgir al observar estos datos:
+
++ Buscar como representar de manera gráfica los datos.
+
++ ¿Cuál es la cantidad mínima de poleras en los datos?
+
+---
+
+background-image: url("imagenes/fondo3.PNG")
+background-size: 910px 90px
+background-position: 100% 0%
+# "Traduciendo" las ideas
+&lt;/br&gt;
++ Buscar como representar de manera gráfica los datos.
+
++ ¿Cuál es la cantidad mínima de poleras en los datos?
+&lt;/br&gt;&lt;/br&gt;
+&lt;center&gt;"Aprender a programar es como aprender una nueva lengua&lt;/center&gt;
+&lt;/br&gt;&lt;/br&gt;
+
+```r
+#Se definen "objetos" 
+poleras&lt;-c(254,203,182,50)
+meses&lt;-c("Ene","Feb","Mar","Abr")
+
+min(poleras) # Encuentra el mínimo
+
+plot(poleras) # Gráfico de puntos
+
+barplot(poleras, # Gráfico de barras
+names.arg=meses,col="orange") # Argumentos adicionales.
+```
+
+---
+
+background-image: url("imagenes/fondo3.PNG")
+background-size: 910px 90px
+background-position: 100% 0%
+# Recomendaciones
+&lt;/br&gt;
+
+1. Utilizar un nombre que tenga alguna relación con los datos que contiene el objeto.
+2. Evitar caracteres especiales, como ñ, tildes o espacios.
+3. Para separar palabras se puede utilizar un guión bajo (proyeccion_enero) o mayúscula inicial (ProyeccionEnero). Lo importante es ser consistente en la opción elegida.
+
+&lt;center&gt;
+&lt;font size="5"&gt;&lt;b&gt;¡Recuerde que R es sensible a mayúsculas y minúsculas! &lt;/b&gt;&lt;/font&gt;
+&lt;/center&gt;
+
+¿Qué pasa al ejecutar el siguiente código?
+
+
+```r
+poleras &lt;- c(254,203,182,50)
+
+mean(Poleras)
+
+sum(poleras)
+```
+
+
+---
+
+background-image: url("imagenes/fondo3.PNG")
+background-size: 910px 90px
+background-position: 100% 0%
+# Paquetes de R
+&lt;/br&gt;
+.pull-left[
+&lt;div style="text-align:justify"&gt; 
+Para hacer efectiva la actualización del software, y basado en el foco académico, R utiliza librerías como conjunto de funciones, datos y documentación que se denominan paquetes o packages.
+&lt;/br&gt;&lt;/br&gt;
+Al iniciar R, sólo se carga un conjunto de funciones, datos y documentación que se conoce como &lt;b&gt;R Base&lt;/b&gt;.
+&lt;/br&gt;&lt;/br&gt;
+Para extender las posibilidades de &lt;b&gt;R Base&lt;/b&gt;, hay que instalar otros paquetes.
+&lt;/div&gt;
+]
+
+.pull-right[
+&lt;img src="imagenes/img13.png" width="80%" style="display: block; margin: auto;" /&gt;
+]
+
+---
+
+background-image: url("imagenes/fondo3.PNG")
+background-size: 910px 90px
+background-position: 100% 0%
+# Paquetes de R
+&lt;/br&gt;
+&lt;div style="text-align:justify"&gt; 
+Los packages se pueden instalar directamente desde el software o descargarlos de forma manual, esto último se puede hacer desde dos fuentes:
+&lt;/div&gt;
+
+.pull-left[
+&lt;font size="5"&gt;&lt;b&gt; CRAN &lt;/b&gt;&lt;/font&gt;&lt;/br&gt;
+&lt;b&gt;Comprehensive R Archive Network&lt;/b&gt;
+&lt;/br&gt;&lt;/br&gt;
+&lt;div style="text-align:justify"&gt; 
+Es el repositorio oficial de paquetes de R. Para estar acá los paquetes deben ser
+aprobados.
+&lt;/div&gt;
+
+
+```r
+install.packages("nombrepaquete")
+```
+
+]
+
+.pull-right[
+&lt;font size="5"&gt;&lt;b&gt; GitHub &lt;/b&gt;&lt;/font&gt;
+&lt;/br&gt;&lt;/br&gt;
+&lt;div style="text-align:justify"&gt; 
+Plataforma para desarrollo de software. Muchos paquetes solo se comparten por
+acá. En Github también se puede acceder a la versión en desarrollo de paquetes que están en CRAN.
+&lt;/div&gt;
+
+```r
+install.packages("remotes")
+remotes::install_github("usuario/nombrepaqute")
+```
+]
+&lt;/br&gt;&lt;/br&gt;
+&lt;div style="text-align:justify"&gt; 
+Los paquetes se instalan solo una vez en el equipo (pero se deben actualizar cada cierto tiempo).
+&lt;/div&gt;
+
+---
+
+background-image: url("imagenes/fondo3.PNG")
+background-size: 910px 90px
+background-position: 100% 0%
+# Paquetes en R
+&lt;/br&gt;
+&lt;div style="text-align:justify"&gt; 
+Para usar las funciones y datos contenidos en un paquete se debe “activar” en la sesión de R:
+&lt;/div&gt;
+&lt;/br&gt;
+
+```r
+library(nombrepaquete)
+```
+&lt;/br&gt;&lt;/br&gt;
+&lt;div style="text-align:justify"&gt; 
+Luego de esto, aparecerán disponibles en la sesión las funciones de ese paquete. Hay tantos paquetes en R que a veces pueden existir múltiples funciones con el mismo nombre, si tiene ambos paquetes cargados esto puede causar problemas en su código. Puede especificar de qué paquete viene una función usando &lt;b&gt;::&lt;/b&gt; de la siguiente forma:
+&lt;/div&gt;
+&lt;/br&gt;
+
+```r
+nombrepaquete::nombrefuncion
+```
+
+---
+
+background-image: url("imagenes/fondo3.PNG")
+background-size: 910px 90px
+background-position: 100% 0%
+# Instalación de paquetes
+&lt;/br&gt;
+Instale el paquete &lt;b&gt;ggplot2&lt;/b&gt;
+&lt;/br&gt;&lt;/br&gt;
+
+```r
+install.packages("ggplot2")
+```
+
+&lt;/br&gt;
+Para activar el paquete se usa:
+&lt;/br&gt;&lt;/br&gt;
+
+```r
+library(ggplot2)
+```
+
+
+---
+
+background-image: url("imagenes/fondo3.PNG")
+background-size: 910px 90px
+background-position: 100% 0%
+# Errores
+&lt;/br&gt;
+&lt;div style="text-align:justify"&gt; 
+La mayoría de los errores de programación son por problemas de tipeo:
+&lt;ul&gt;
+&lt;li&gt; Escribir mal el nombre de una función u objeto.
+&lt;li&gt; Falta cerrar un paréntesis.
+&lt;li&gt; Falta una coma.
+&lt;/ul&gt;
+
+En caso de que falte un paréntesis o una coma, el editor de RStudio nos lo advertirá.
+&lt;/br&gt;&lt;/br&gt;
+A veces se generan problemas porque se olvida correr una línea de código o porque se sobreescribe un objeto. En esos casos, lo mejor es reiniciar R y volver a ejecutar el código desde el principio.
+&lt;/br&gt;&lt;/br&gt;
+&lt;center&gt;&lt;b&gt;¡Recuerda que equivocarse es normal!&lt;/b&gt;&lt;/center&gt;
+&lt;/br&gt;
+&lt;b&gt;Buscadores como Google ayudan mucho a resolver errores, saber como buscar soluciones a las dificultades de manera eficiente es una herramienta importante para cualquier lenguaje de programación.&lt;/b&gt;
+&lt;/div&gt;
+
+---
+
+class: center, middle
+
+background-image: url("imagenes/fondo42.PNG")
+background-size: 110% 100%
+background-position: 50% 50%
+
+&lt;br/&gt;&lt;br/&gt;&lt;br/&gt;&lt;br/&gt;&lt;br/&gt;&lt;br/&gt;&lt;br/&gt;
+
+## Muchas Gracias
+
+    </textarea>
+<style data-target="print-only">@media screen {.remark-slide-container{display:block;}.remark-slide-scaler{box-shadow:none;}}</style>
+<script src="https://remarkjs.com/downloads/remark-latest.min.js"></script>
+<script>var slideshow = remark.create({
+"highlightStyle": "github",
+"highlightLines": true,
+"countIncrementalSlides": false
+});
+if (window.HTMLWidgets) slideshow.on('afterShowSlide', function (slide) {
+  window.dispatchEvent(new Event('resize'));
+});
+(function(d) {
+  var s = d.createElement("style"), r = d.querySelector(".remark-slide-scaler");
+  if (!r) return;
+  s.type = "text/css"; s.innerHTML = "@page {size: " + r.style.width + " " + r.style.height +"; }";
+  d.head.appendChild(s);
+})(document);
+
+(function(d) {
+  var el = d.getElementsByClassName("remark-slides-area");
+  if (!el) return;
+  var slide, slides = slideshow.getSlides(), els = el[0].children;
+  for (var i = 1; i < slides.length; i++) {
+    slide = slides[i];
+    if (slide.properties.continued === "true" || slide.properties.count === "false") {
+      els[i - 1].className += ' has-continuation';
+    }
+  }
+  var s = d.createElement("style");
+  s.type = "text/css"; s.innerHTML = "@media print { .has-continuation { display: none; } }";
+  d.head.appendChild(s);
+})(document);
+// delete the temporary CSS (for displaying all slides initially) when the user
+// starts to view slides
+(function() {
+  var deleted = false;
+  slideshow.on('beforeShowSlide', function(slide) {
+    if (deleted) return;
+    var sheets = document.styleSheets, node;
+    for (var i = 0; i < sheets.length; i++) {
+      node = sheets[i].ownerNode;
+      if (node.dataset["target"] !== "print-only") continue;
+      node.parentNode.removeChild(node);
+    }
+    deleted = true;
+  });
+})();
+// add `data-at-shortcutkeys` attribute to <body> to resolve conflicts with JAWS
+// screen reader (see PR #262)
+(function(d) {
+  let res = {};
+  d.querySelectorAll('.remark-help-content table tr').forEach(tr => {
+    const t = tr.querySelector('td:nth-child(2)').innerText;
+    tr.querySelectorAll('td:first-child .key').forEach(key => {
+      const k = key.innerText;
+      if (/^[a-z]$/.test(k)) res[k] = t;  // must be a single letter (key)
+    });
+  });
+  d.body.setAttribute('data-at-shortcutkeys', JSON.stringify(res));
+})(document);
+(function() {
+  "use strict"
+  // Replace <script> tags in slides area to make them executable
+  var scripts = document.querySelectorAll(
+    '.remark-slides-area .remark-slide-container script'
+  );
+  if (!scripts.length) return;
+  for (var i = 0; i < scripts.length; i++) {
+    var s = document.createElement('script');
+    var code = document.createTextNode(scripts[i].textContent);
+    s.appendChild(code);
+    var scriptAttrs = scripts[i].attributes;
+    for (var j = 0; j < scriptAttrs.length; j++) {
+      s.setAttribute(scriptAttrs[j].name, scriptAttrs[j].value);
+    }
+    scripts[i].parentElement.replaceChild(s, scripts[i]);
+  }
+})();
+(function() {
+  var links = document.getElementsByTagName('a');
+  for (var i = 0; i < links.length; i++) {
+    if (/^(https?:)?\/\//.test(links[i].getAttribute('href'))) {
+      links[i].target = '_blank';
+    }
+  }
+})();
+// adds .remark-code-has-line-highlighted class to <pre> parent elements
+// of code chunks containing highlighted lines with class .remark-code-line-highlighted
+(function(d) {
+  const hlines = d.querySelectorAll('.remark-code-line-highlighted');
+  const preParents = [];
+  const findPreParent = function(line, p = 0) {
+    if (p > 1) return null; // traverse up no further than grandparent
+    const el = line.parentElement;
+    return el.tagName === "PRE" ? el : findPreParent(el, ++p);
+  };
+
+  for (let line of hlines) {
+    let pre = findPreParent(line);
+    if (pre && !preParents.includes(pre)) preParents.push(pre);
+  }
+  preParents.forEach(p => p.classList.add("remark-code-has-line-highlighted"));
+})(document);</script>
+
+<script>
+slideshow._releaseMath = function(el) {
+  var i, text, code, codes = el.getElementsByTagName('code');
+  for (i = 0; i < codes.length;) {
+    code = codes[i];
+    if (code.parentNode.tagName !== 'PRE' && code.childElementCount === 0) {
+      text = code.textContent;
+      if (/^\\\((.|\s)+\\\)$/.test(text) || /^\\\[(.|\s)+\\\]$/.test(text) ||
+          /^\$\$(.|\s)+\$\$$/.test(text) ||
+          /^\\begin\{([^}]+)\}(.|\s)+\\end\{[^}]+\}$/.test(text)) {
+        code.outerHTML = code.innerHTML;  // remove <code></code>
+        continue;
+      }
+    }
+    i++;
+  }
+};
+slideshow._releaseMath(document);
+</script>
+<!-- dynamically load mathjax for compatibility with self-contained -->
+<script>
+(function () {
+  var script = document.createElement('script');
+  script.type = 'text/javascript';
+  script.src  = 'https://mathjax.rstudio.com/latest/MathJax.js?config=TeX-MML-AM_CHTML';
+  if (location.protocol !== 'file:' && /^https?:/.test(script.src))
+    script.src  = script.src.replace(/^https?:/, '');
+  document.getElementsByTagName('head')[0].appendChild(script);
+})();
+</script>
+  </body>
+</html>
